@@ -1,0 +1,41 @@
+<div class="main-div">
+  <div class="test-div"></div>
+  <form class="selected-item-form" [formGroup]="form">
+    <div class="district">
+      <p-dropdown
+        [options]="states"
+        optionLabel="state_name"
+         optionValue="state_id"
+        placeholder="Select Your State"
+        formControlName="selectedState"
+      ></p-dropdown>
+
+    </div>
+    <div class="state">
+      <p-dropdown
+        [options]="districts"
+        optionLabel="district_name"
+        optionValue="district_id"
+        placeholder="Select District"
+        formControlName="selectedDistrict"
+      ></p-dropdown>
+    </div>
+    <div class="search">
+      <button
+        pButton
+        pRipple
+        type="button"
+        label="Success"
+        class="p-button-rounded"
+        (click)="searchAppoinmentBtDist()"
+      ></button>
+    </div>
+  </form>
+</div>
+
+<div class="vaccines-card" *ngFor="let item of vaccineData ">
+  <app-vaccine [vaccinationDetails]="item"></app-vaccine>
+</div>
+
+
+<!-- {{selectedState | json }} -->

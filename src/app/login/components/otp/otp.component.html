@@ -1,0 +1,71 @@
+<!-- <div class="otp-card">
+  <p-card [style]="{ width: '28rem', 'margin-bottom': '2em' }">
+    <form [formGroup]="form">
+      <div class="">
+        <h4>Register or Sign In for Vaccination</h4>
+      </div>
+
+      <div>
+        <p>An OTP will be sent to your mobile number for verification</p>
+      </div>
+
+      <div class="field">
+        <input
+          type="username"
+          aria-describedby="username2-help"
+          placeholder="Enter Mobile Number"
+          pInputText
+          formControlName="mobile"
+        />
+      </div>
+      <hr />
+      <div>
+        <button
+          pButton
+          pRipple
+          type="button"
+          label="Get OTP"
+          class="p-button-raised p-button-success"
+          (click)="genrateOtp()"
+        ></button>
+      </div>
+      <div>
+        <p>
+          By Sign In/Registration, I agree to the
+          <a href=""> Terms of Service </a> and <a href=""> Privacy Policy </a>
+        </p>
+      </div>
+    </form>
+  </p-card>
+</div> -->
+
+<div class="otp-main-container">
+  <p-card [style]="{ width: '35rem', 'margin-bottom': '2em' }">
+    <div class="otp-card-container">
+      <div class="heading">
+        <span>Register or Sign In for Vaccination</span>
+      </div>
+      <div class="sub-heading">
+        <span>An OTP will be sent to your mobile number for verification</span>
+      </div>
+      <div class="input-container">
+        <form [formGroup]="form">
+          <input
+            type="text"
+            class="p-inputtext-sm mb-4 mt-3 w-100"
+            placeholder="Enter Your Mobile Number"
+            pInputText
+            formControlName="mobile"
+          />
+        </form>
+      </div>
+      <div class="genrate-otp">
+        <p-button
+          label="Get OTP"
+          styleClass="p-button-sm w-100 app-primary-btn"
+          (click)="gerateOtp()"
+        ></p-button>
+      </div>
+    </div>
+  </p-card>
+</div>

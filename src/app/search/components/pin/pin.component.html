@@ -1,0 +1,30 @@
+<div class="main-div">
+  <div class="test-div"></div>
+  <form class="selected-item-form" [formGroup]="form">
+    <div class="district">
+      <span class="p-input-icon-left">
+        <i class="pi pi-search"></i>
+        <input
+          type="text"
+          pInputText
+          placeholder="Search"
+          formControlName="pin"
+        />
+      </span>
+    </div>
+    <div class="search">
+      <button
+        pButton
+        pRipple
+        type="button"
+        label="Search"
+        class="p-button-rounded"
+        (click)="searchVaccination()"
+      ></button>
+    </div>
+  </form>
+</div>
+
+<div *ngFor="let item of vaccineDeatilsByPin">
+    <app-vaccine [vaccinationDetails]="item"></app-vaccine>
+</div>
